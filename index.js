@@ -5,6 +5,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.listen(5000,()=>{console.log("Server is running.....")})
+app.get("/",(req,res)=>{
+    res.send("Backend is working")
+});
 
 var users=[{email:"1234@gmail.com", phone:"1234567890", password:"123"}]
 app.post("/",(req,res)=>{
